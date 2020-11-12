@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import faker from 'faker';
 
 const ReviewsApp = () => {
 
+
+
   return (
-    <div>Testing</div>
+    <div>Hello, world.</div>
   )
 };
+
+export default ReviewsApp;

@@ -4,8 +4,9 @@
   "description": "Reviews component for Hack Reactor group project.",
   "main": "index.js",
   "scripts": {
-    "webpack": "webpack -d --watch",
-    "nodemon": "nodemon server/server.js"
+    "webpack": "webpack --watch",
+    "nodemon": "nodemon server/server.js",
+    "seed-database": "node database/seedData/seedData.js"
   },
   "repository": {
     "type": "git",
@@ -18,12 +19,13 @@
   },
   "homepage": "https://github.com/The-Fresh-Prince-of-AirBNB/ReviewsSectionThree#readme",
   "devDependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
     "axios": "^0.21.0",
-    "babel-core": "^6.26.3",
     "babel-loader": "^8.2.1",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
     "express": "^4.17.1",
+    "faker": "^5.1.0",
     "mongo": "^0.1.0",
     "mongoose": "^5.10.13",
     "node": "^15.0.1",
