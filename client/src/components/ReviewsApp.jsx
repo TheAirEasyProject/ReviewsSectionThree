@@ -4,7 +4,7 @@ import axios from 'axios';
 const ReviewsApp = () => {
 
   return (
-    <div>Hello, world.</div>
+    <div>I love React Hooks.</div>
   )
 };
 
