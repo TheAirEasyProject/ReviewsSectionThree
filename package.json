@@ -1,0 +1,35 @@
+{
+  "name": "fecproject",
+  "version": "1.0.0",
+  "description": "Reviews component for Hack Reactor group project.",
+  "main": "index.js",
+  "scripts": {
+    "webpack": "webpack -d --watch",
+    "nodemon": "nodemon server/server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/The-Fresh-Prince-of-AirBNB/ReviewsSectionThree.git"
+  },
+  "author": "Vikram Pal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/The-Fresh-Prince-of-AirBNB/ReviewsSectionThree/issues"
+  },
+  "homepage": "https://github.com/The-Fresh-Prince-of-AirBNB/ReviewsSectionThree#readme",
+  "devDependencies": {
+    "axios": "^0.21.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.2.1",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "express": "^4.17.1",
+    "mongo": "^0.1.0",
+    "mongoose": "^5.10.13",
+    "node": "^15.0.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "webpack": "^5.4.0",
+    "webpack-cli": "^4.2.0"
+  }
+}
