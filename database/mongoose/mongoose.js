@@ -9,6 +9,7 @@ db.once('open', () => console.log('Mongoose is running'));
 
 const listingSchema = new mongoose.Schema({
   listing_id: Number,
+  listing_rating: Number,
   listing_reviews: Array
 })
 
@@ -23,6 +24,7 @@ const reviewSchema = new mongoose.Schema({
     user_avatar: String
     },
   ratings: {
+    ratings_average: Number,
     cleanliness: Number,
     communication: Number,
     check_in: Number,

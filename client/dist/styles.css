@@ -12,27 +12,19 @@ html, body {
 
 .ratings {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  justify-content: space-between;
+  grid-template-columns: 1fr 1fr;
   grid-gap: 15px;
-}
-
-.reviews {
-  padding-top: 40px;
 }
 
 .reviewsTopSix {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  grid-gap: 40px;
   padding-top: 50px;
 }
 
-img {
+.avatar {
   border-radius: 50%;
-}
-
-.totalreviews {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 25px;
+  width: 40px;
+  height: 40px;
 }
