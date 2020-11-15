@@ -30,3 +30,9 @@ html, body {
 img {
   border-radius: 50%;
 }
+
+.totalreviews {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+}

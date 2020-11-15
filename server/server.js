@@ -10,8 +10,8 @@ const publicDirectory = path.join(__dirname, '../client/dist');
 app.use(express.json());
 app.use(express.static(publicDirectory));
 
-app.get('/reviews', controller.getAll);
-app.get('/reviews/:id', controller.getOne);
+app.get('/listings/reviews', controller.getAll);
+app.get('/listings/:id/reviews', controller.getOne);
 
 app.listen(port, () => {
   console.log(`Express is listening on port ${port}`);

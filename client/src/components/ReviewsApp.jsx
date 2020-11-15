@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Ratings from './Ratings.jsx';
+import Ratings from './RatingsHeader/RatingsHeader.jsx';
 import Reviews from './Reviews.jsx';
 import axios from 'axios';
 
@@ -9,20 +9,22 @@ const ReviewsApp = () => {
   const [reviewsData, setReviewsData] = useState([]);
 
   useEffect(() => {
+    let id = Math.floor(Math.random() * 100) + 1
+
     axios
-      .get('/reviews')
+      .get(`listings/${id}/reviews`)
       .then(res => setReviewsData(res.data))
-      .catch(err => console.log(err))
+      .catch(err => console.log(err));
   }, []);
 
   return (
     <div>
-      <Ratings />
-      <reviewsContext.Provider value={reviewsData.slice(0, 6)}>
+      <reviewsContext.Provider value={reviewsData}>
+        <Ratings />
         <Reviews />
       </reviewsContext.Provider>
     </div>
-  )
+  );
 };
 
 export default ReviewsApp;
