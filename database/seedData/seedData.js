@@ -17,7 +17,7 @@ let seedDb = (data) => {
         'review': {
           'review_id': currentListing.listing_id,
           'review_text': faker.lorem.sentences(),
-          'review_date': faker.date.past()
+          'review_date': 'Test'
         },
         'user': {
           'user_name': faker.name.firstName(),
@@ -42,12 +42,21 @@ let seedDb = (data) => {
     while (num <= randomAmount) {
       let currentReview = new Model.Review(newReview())
 
+      let randomDate = () => {
+        let years = [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020];
+        let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+        let randomYear = Math.floor(Math.random() * (years.length - 0)) + 0
+
+        let randomMonth = Math.floor(Math.random() * (months.length - 0)) + 0
+        return `${months[randomMonth]} ${years[randomYear].toString()}`
+      }
+
+      currentReview.review.review_date = randomDate()
+
       let rating = currentReview.ratings;
-
       let avgRating = (rating.cleanliness + rating.communication + rating.check_in + rating.accuracy + rating.location + rating.value) / 6;
-
       let newAvgRating = avgRating.toString().slice(0, 3);
-
       currentReview.ratings.ratings_average = Number(newAvgRating);
 
       emptyArray.push(currentReview);

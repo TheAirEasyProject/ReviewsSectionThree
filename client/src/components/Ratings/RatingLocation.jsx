@@ -13,7 +13,7 @@ const RatingLocation = ( {data} ) => {
       let newTotal = (total / data[0].listing_reviews.length).toString().slice(0, 3);
       setLocationData(Number(newTotal));
     }
-  });
+  }, [data]);
 
   return (
     <div>

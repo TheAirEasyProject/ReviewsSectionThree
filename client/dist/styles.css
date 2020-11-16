@@ -22,6 +22,7 @@ html, body {
 
 .reviews {
   padding-top: 50px;
+  padding-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
@@ -77,3 +78,43 @@ html, body {
   display: flex;
   justify-content: space-between;
 }
+
+.reviewbutton {
+  position: absolute;
+  border: 1px solid black;
+  border-radius: 8px;
+  background-color: transparent;
+  font-size: 16px;
+  height: 50px;
+  width: 200px;
+  outline: none;
+}
+
+#startBtn {
+  position: relative;
+  top: 0px;
+  transition: all ease .2s;
+}
+#startBtn:active {
+  transform: scale(.98);
+}
+
+#startBtn:hover {
+  background-color: lightgray;
+  outline: 0;
+}
+
+.topdiv {
+  padding-bottom: 20px;
+  border-top: .03px solid lightgray;
+}
+
+.botdiv {
+  padding-top: 100px;
+  border-top: .03px solid lightgray;
+}
+
+.buttontest {
+  padding-bottom: 50px;
+}
+

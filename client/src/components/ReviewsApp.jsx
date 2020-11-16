@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import RatingsApp from './Ratings/RatingsApp.jsx';
 import Reviews from './Reviews.jsx';
+import MoreReviewsApp from './MoreReviews/MoreReviewsApp.jsx';
 import axios from 'axios';
 
 const ReviewsApp = () => {
@@ -17,8 +18,11 @@ const ReviewsApp = () => {
   return (
     <div>
       <div className='main'>
-      <RatingsApp data={listingData}/>
-      <Reviews data={listingData}/>
+        <div className='topdiv'></div>
+          <RatingsApp data={listingData}/>
+          <Reviews data={listingData}/>
+          <MoreReviewsApp data={listingData}/>
+        <div className='botdiv'></div>
       </div>
     </div>
   );

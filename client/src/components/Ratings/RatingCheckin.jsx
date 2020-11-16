@@ -13,7 +13,7 @@ const RatingCheckin = ( {data} ) => {
       let newTotal = (total / data[0].listing_reviews.length).toString().slice(0, 3);
       setCheckinData(Number(newTotal));
     }
-  });
+  }, [data]);
 
   return (
     <div>

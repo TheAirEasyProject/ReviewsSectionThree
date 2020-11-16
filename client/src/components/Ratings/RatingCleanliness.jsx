@@ -13,7 +13,7 @@ const RatingCleanliness = ( {data} ) => {
       let newTotal = (total / data[0].listing_reviews.length).toString().slice(0, 3);
       setCleanData(Number(newTotal));
     }
-  });
+  }, [data]);
 
   return (
     <div >Cleanliness {cleanData}</div>

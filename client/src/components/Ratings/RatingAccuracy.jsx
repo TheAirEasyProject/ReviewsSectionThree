@@ -13,7 +13,7 @@ const RatingAccuracy = ( {data} ) => {
       let newTotal = (total / data[0].listing_reviews.length).toString().slice(0, 3);
       setAccuracyData(Number(newTotal));
     }
-  });
+  }, [data]);
 
   return (
     <div>
