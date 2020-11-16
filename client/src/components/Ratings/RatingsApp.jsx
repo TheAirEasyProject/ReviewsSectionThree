@@ -11,13 +11,13 @@ const RatingsApp = ( {data} ) => {
   return (
     <div>
         <RatingsHeader data={data}/>
-      <div className='ratings'>
-        <RatingCleanliness data={data}/>
-        <RatingAccuracy data={data}/>
-        <RatingCommunication data={data}/>
-        <RatingLocation data={data}/>
-        <RatingCheckin data={data}/>
-        <RatingValue data={data}/>
+        <div className='ratings'>
+          <RatingCleanliness data={data}/>
+          <RatingAccuracy data={data}/>
+          <RatingCommunication data={data}/>
+          <RatingLocation data={data}/>
+          <RatingCheckin data={data}/>
+          <RatingValue data={data}/>
       </div>
     </div>
   )

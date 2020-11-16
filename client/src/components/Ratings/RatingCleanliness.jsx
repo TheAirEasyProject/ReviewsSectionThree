@@ -16,7 +16,7 @@ const RatingCleanliness = ( {data} ) => {
   });
 
   return (
-    <div>Cleanliness {cleanData}</div>
+    <div >Cleanliness {cleanData}</div>
   )
 }
 

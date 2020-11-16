@@ -7,7 +7,7 @@ const ReviewsApp = () => {
   const [listingData, setlistingData] = useState([]);
 
   useEffect(() => {
-    let id = Math.floor(Math.random() * 100) + 1 // Random Test ids
+    let id = Math.floor(Math.random() * 100) + 1
     axios
       .get(`listings/${id}/reviews`)
       .then(res => setlistingData(res.data))
@@ -16,8 +16,10 @@ const ReviewsApp = () => {
 
   return (
     <div>
+      <div className='main'>
       <RatingsApp data={listingData}/>
       <Reviews data={listingData}/>
+      </div>
     </div>
   );
 };
