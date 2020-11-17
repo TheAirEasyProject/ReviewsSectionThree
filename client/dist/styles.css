@@ -140,3 +140,90 @@ html, body {
   margin-bottom: 10px;
 }
 
+
+/* Modal CSS */
+
+.modal-wrapper {
+  background: rgba(90, 88, 88, 0.322);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.asd {
+  width: 80%;
+  height: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.modal-header {
+  background: white;
+  color: #e9e9e9;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.modal-header span {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-content {
+  padding: 1.5rem 1rem;
+}
+
+.modal-body {
+  margin-bottom: 1rem;
+}
+
+.modal-body h4 {
+  font-size: 1.8rem;
+  color: coral;
+}
+
+.flex-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.flex-content-left {
+  flex: 0 0 35%;
+  background-color: teal;
+}
+
+.flex-content-right {
+  flex: 0 0 60%;
+  background-color: tomato;
+}
+
+.close-modal-btn {
+  color: black;
+  border-radius: 50%;
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  transition: all .3s ease;
+  text-align: center;
+  border: none;
+  font-size: 16px;
+  background-color: transparent;
+  outline: none;
+}
+
+.close-modal-btn:hover {
+  background-color: rgba(0, 0, 0, 0.10) ;
+}

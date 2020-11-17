@@ -1,10 +1,12 @@
 import React, { useState, useEffect } from 'react'
 import MoreReviewsButton from './MoreReviewsButton.jsx';
 
+
 const MoreReviewsApp = ( {data} ) => {
+
   return (
     <div className='buttontest'>
-      <MoreReviewsButton data={data}/>
+      <MoreReviewsButton data={data} />
     </div>
   )
 }
