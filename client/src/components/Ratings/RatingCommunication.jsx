@@ -15,9 +15,29 @@ const RatingCommunication = ( {data} ) => {
     }
   }, [data]);
 
+  const containerStyles = {
+    height: 4,
+    width: 120,
+    backgroundColor: "#e0e0de",
+    borderRadius: 5,
+    margin: 5
+  }
+
+  const fillerStyles = {
+    height: 4,
+    width: `${communicationData * 20}%`,
+    backgroundColor: 'black',
+    borderRadius: 'inherit'
+  }
+
   return (
-    <div>
-      Communication {communicationData}
+    <div className='ratingsBar'>
+    <div className='ratingsData'>Communication</div>
+
+    <div className='barandnumber'><span className='bar'style={containerStyles}>
+      <span className='barStyle' style={fillerStyles}></span></span>
+
+      <span className='inlinedata'>{communicationData}</span></div>
     </div>
   )
 }

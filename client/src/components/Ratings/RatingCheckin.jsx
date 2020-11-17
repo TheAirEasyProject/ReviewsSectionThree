@@ -15,9 +15,29 @@ const RatingCheckin = ( {data} ) => {
     }
   }, [data]);
 
+  const containerStyles = {
+    height: 4,
+    width: 120,
+    backgroundColor: "#e0e0de",
+    borderRadius: 5,
+    margin: 5
+  }
+
+  const fillerStyles = {
+    height: 4,
+    width: `${checkinData * 20}%`,
+    backgroundColor: 'black',
+    borderRadius: 'inherit'
+  }
+
   return (
-    <div>
-      Check-in {checkinData}
+    <div className='ratingsBar'>
+    <div className='ratingsData'>Check-in</div>
+
+    <div className='barandnumber'><span className='bar'style={containerStyles}><span className='barStyle' style={fillerStyles}></span>
+    </span>
+
+    <span className='inlinedata'>{checkinData}</span></div>
     </div>
   )
 }

@@ -13,11 +13,13 @@ html, body {
 .ratings {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 25px;
-  grid-template-areas:
-  "r r"
-  "r r"
-  "r r";
+  grid-gap: 17px;
+}
+
+.ratingsBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .reviews {
@@ -26,6 +28,19 @@ html, body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-gap: 30px;
+}
+
+.barandnumber {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 82px;
+}
+
+.inlinedata {
+  padding-left: 8px;
+  width: 30px;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 .reviewsTopSix {
@@ -110,11 +125,18 @@ html, body {
 }
 
 .botdiv {
-  padding-top: 100px;
   border-top: .03px solid lightgray;
 }
 
 .buttontest {
   padding-bottom: 50px;
+}
+
+.ratingsData, .bar, .inlinedata {
+  display: inline-flex;
+}
+
+.cleanBar {
+  margin-bottom: 10px;
 }
 

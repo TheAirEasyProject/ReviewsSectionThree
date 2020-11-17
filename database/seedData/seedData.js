@@ -9,7 +9,7 @@ let seedDb = (data) => {
     const currentListing = new Model.Listing(listing);
 
     let randomInt = () => {
-      return ((Math.random() * (5 - 2)) + 2).toString().slice(0, 1);
+      return ((Math.random() * (7 - 2)) + 2).toString().slice(0, 1);
     };
 
     let newReview = () => {
@@ -37,7 +37,7 @@ let seedDb = (data) => {
 
     let emptyArray = [];
     let num = 1;
-    const randomAmount = Math.floor(Math.random() * (200 - 30)) + 30;
+    const randomAmount = Math.floor(Math.random() * (200 - 100)) + 100;
 
     while (num <= randomAmount) {
       let currentReview = new Model.Review(newReview())

@@ -15,9 +15,25 @@ const RatingValue = ( {data} ) => {
     }
   }, [data]);
 
+  const containerStyles = {
+    height: 4,
+    width: 120,
+    backgroundColor: "#e0e0de",
+    borderRadius: 5,
+    margin: 5
+  }
+
+  const fillerStyles = {
+    height: 4,
+    width: `${valueData * 20}%`,
+    backgroundColor: 'black',
+    borderRadius: 'inherit'
+  }
+
   return (
-    <div>
-      Value {valueData}
+    <div className='ratingsBar'>
+    <div className='ratingsData'>Value</div>
+    <div className='barandnumber'><span className='bar'style={containerStyles}><span className='barStyle' style={fillerStyles}></span></span><span className='inlinedata'>{valueData}</span></div>
     </div>
   )
 }
