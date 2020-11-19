@@ -1,6 +1,7 @@
 html, body {
   font-family: sans-serif;
   margin: 25px;
+
 }
 
 .header {
@@ -144,7 +145,7 @@ html, body {
 /* Modal CSS */
 
 .modal-wrapper {
-  background: rgba(90, 88, 88, 0.322);
+  background: rgba(90, 88, 88, .6);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -201,13 +202,13 @@ html, body {
 }
 
 .flex-content-left {
-  flex: 0 0 35%;
-  background-color: teal;
+  flex: 0 0 40%;
+  padding-right: 40px;
 }
 
 .flex-content-right {
-  flex: 0 0 60%;
-  background-color: tomato;
+  flex: 0 0 55%;
+  text-align: right;
 }
 
 .close-modal-btn {
@@ -227,3 +228,77 @@ html, body {
 .close-modal-btn:hover {
   background-color: rgba(0, 0, 0, 0.10) ;
 }
+
+.searchbar {
+  position: relative;
+  width: 100%;
+}
+
+.searchinput {
+  background-color: rgba(245, 241, 241, 0.781);
+  height: 40px;
+  width: 100%;
+  border: 1px solid rgb(182, 181, 181);
+  border-radius: 20px;
+  outline: none;
+  padding: 0 37px;
+  font-weight: lighter;
+  padding-top: 2.8px;
+}
+
+.searchinput:focus {
+  border: 2px solid black;
+}
+
+.modalp {
+  margin: 0;
+  font-size: 30px;
+  font-weight: 600;
+}
+
+.searchicon {
+  position: absolute;
+  bottom: 0;
+  top: 0;
+  width: 30px;
+}
+
+.searchicon i {
+  position: absolute;
+  left: 70%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#staricon {
+  color: #FF385C;
+}
+
+/* .modalreviews__content {
+
+  padding: 2px;
+}
+
+.modalreviews__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.modalreviews__box__left {
+flex: 0 0 40%;
+text-align: left;
+}
+
+.modalreviews__box__right {
+flex: 0 0 55%;
+text-align: right;
+padding-left: 40px;
+
+}
+
+.modalreviews__box__right__bar {
+  width: 80%;
+  background: yellow;
+  height: 5px;
+} */
