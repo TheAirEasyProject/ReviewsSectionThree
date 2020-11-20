@@ -21,7 +21,7 @@ let seedDb = (data) => {
         },
         'user': {
           'user_name': faker.name.firstName(),
-          'user_avatar': faker.image.avatar()
+          'user_avatar': ''
         },
         'ratings': {
           'ratings_average': 0,
@@ -41,6 +41,15 @@ let seedDb = (data) => {
 
     while (num <= randomAmount) {
       let currentReview = new Model.Review(newReview())
+
+      let randomImages = () => {
+
+        let random = Math.floor(Math.random() * (400)) + 0;
+
+        return `https://rickandmortyapi.com/api/character/avatar/${random}.jpeg`
+      }
+
+      currentReview.user.user_avatar = randomImages();
 
       let randomDate = () => {
         let years = [2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020];
@@ -76,9 +85,7 @@ let seedDb = (data) => {
     let newTotal = (total / emptyArray.length).toString().slice(0, 4);
 
     currentListing.listing_rating =  Number(newTotal);
-
     currentListing.listing_reviews = emptyArray;
-
     currentListing.save(err => {
       if (err) {
         console.log(err);

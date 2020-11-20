@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import MoreReviewsModal from './MoreReviewsModal.jsx';
+import styles from '../../../../styles.css';
 
 const MoreReviewsButton = ( {data} ) => {
 
@@ -13,10 +14,9 @@ const MoreReviewsButton = ( {data} ) => {
   }
 
   return (
-    <div className='reviewsbuttonparent'>
-      <button id='startBtn'className='reviewbutton'
+    <div className={styles.reviewsbuttonparent}>
+      <button id={styles.startBtn} className={styles.reviewbutton}
       onClick={() => setModalState(!modalState)}>Show all {totalReviews} reviews</button>
-
       {modalState && <MoreReviewsModal data={data} modal={modalState} modalState={setModalState}/>}
     </div>
   )

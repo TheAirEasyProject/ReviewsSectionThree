@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import styles from '../../../../styles.css';
 
 const RatingLocation = ( {data} ) => {
 
@@ -33,9 +34,9 @@ const RatingLocation = ( {data} ) => {
   }
 
   return (
-    <div className='ratingsBar'>
-    <div className='ratingsData'>Location</div>
-    <div className='barandnumber'><span className='bar'style={containerStyles}><span className='barStyle' style={fillerStyles}></span></span><span className='inlinedata'>{locationData}</span></div>
+    <div className={styles.ratingsBar}>
+    <div className={styles.ratingsData}>Location</div>
+    <div className={styles.barandnumber}><span className={styles.bar}style={containerStyles}><span className={styles.barStyle} style={fillerStyles}></span></span><span className={styles.inlinedata}>{locationData}</span></div>
     </div>
   )
 }

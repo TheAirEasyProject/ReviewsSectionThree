@@ -1,14 +1,15 @@
 import React from 'react';
+import styles from '../../../styles.css';
 
 const ReviewsEntries = ( {review} ) => {
   return (
-    <div className='reviewsTopSix'>
-      <img className ='avatar' src={review.user.user_avatar}></img>
-      <div className='namedate'>
-      <div className='user_name'>{review.user.user_name}</div>
-      <div className='review_date'>{review.review.review_date}</div>
+    <div className={styles.reviewsTopSix}>
+      <img className ={styles.avatar} src={review.user.user_avatar}></img>
+      <div className={styles.namedate}>
+      <div className={styles.user_name}>{review.user.user_name}</div>
+      <div className={styles.review_date}>{review.review.review_date}</div>
       </div>
-      <div className='review_text'>{review.review.review_text}</div>
+      <div className={styles.review_text}>{review.review.review_text}</div>
     </div>
   )
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import RatingsApp from './Ratings/RatingsApp.jsx';
 import Reviews from './Reviews.jsx';
 import MoreReviewsApp from './MoreReviews/MoreReviewsApp.jsx';
+import styles from '../../../styles.css';
 import axios from 'axios';
 
 const ReviewsApp = () => {
@@ -18,12 +19,12 @@ const ReviewsApp = () => {
   return (
 
     <div>
-      <div className='main'>
-        <div className='topdiv'></div>
+      <div className={styles.main}>
+        <div className={styles.topdiv}></div>
           <RatingsApp data={listingData}/>
           <Reviews data={listingData}/>
           <MoreReviewsApp data={listingData}/>
-        <div className='botdiv'></div>
+        <div className={styles.botdiv}></div>
       </div>
     </div>
   );

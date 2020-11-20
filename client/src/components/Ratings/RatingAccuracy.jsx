@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import styles from '../../../../styles.css';
 
 const RatingAccuracy = ( {data} ) => {
 
@@ -32,12 +33,12 @@ const RatingAccuracy = ( {data} ) => {
   }
 
   return (
-    <div className='ratingsBar'>
-    <div className='ratingsData'>Accuracy</div>
+    <div className={styles.ratingsBar}>
+    <div className={styles.ratingsData}>Accuracy</div>
 
-    <div className='barandnumber'><span className='bar'style={containerStyles}><span className='barStyle' style={fillerStyles}></span></span>
+    <div className={styles.barandnumber}><span className={styles.bar}style={containerStyles}><span className={styles.barStyle} style={fillerStyles}></span></span>
 
-    <span className='inlinedata'>{accuracyData}</span></div>
+    <span className={styles.inlinedata}>{accuracyData}</span></div>
     </div>
   )
 }

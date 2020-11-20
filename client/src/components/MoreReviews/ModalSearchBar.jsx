@@ -1,12 +1,15 @@
 import React from 'react'
+import ModalReviewsList from './ModalReviewsList.jsx';
+import styles from '../../../../styles.css';
 
-const ModalSearchBar = () => {
+const ModalSearchBar = ( {data} ) => {
   return (
-    <div className='searchwrapper'>
-      <div className='searchbar'>
-        <div className='searchicon'><i class="fa fa-search"></i></div>
-      <input className='searchinput' placeholder='Search reviews'></input>
-    </div></div>
+    <div className={styles.searchwrapper}>
+      <div className={styles.searchbar}>
+        <div className={styles.searchicon}><i className="fa fa-search"></i></div>
+      <input className={styles.searchinput} placeholder='Search reviews'></input>
+    </div>
+      </div>
   )
 }
 
