@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import styles from '../../../../styles.css';
+import React, { useState, useEffect } from "react";
+import styles from "../../../../styles.css";
 
-const RatingAccuracy = ( {data} ) => {
-
+const RatingAccuracy = ({ data }) => {
   const [accuracyData, setAccuracyData] = useState(0);
   const [doneLoading, setDoneLoading] = useState(false);
 
@@ -10,10 +9,12 @@ const RatingAccuracy = ( {data} ) => {
     setDoneLoading(true);
 
     let total = 0;
-    data[0].listing_reviews.forEach(entry => {
-      total += entry.ratings.accuracy
-    })
-    let newTotal = (total / data[0].listing_reviews.length).toString().slice(0, 3);
+    data[0].listing_reviews.forEach((entry) => {
+      total += entry.ratings.accuracy;
+    });
+    let newTotal = (total / data[0].listing_reviews.length)
+      .toString()
+      .slice(0, 3);
     setAccuracyData(Number(newTotal));
   }
 
@@ -22,25 +23,27 @@ const RatingAccuracy = ( {data} ) => {
     width: 120,
     backgroundColor: "#e0e0de",
     borderRadius: 5,
-    margin: 5
-  }
+    margin: 5,
+  };
 
   const fillerStyles = {
     height: 4,
     width: `${accuracyData * 20}%`,
-    backgroundColor: 'black',
-    borderRadius: 'inherit'
-  }
+    backgroundColor: "black",
+    borderRadius: "inherit",
+  };
 
   return (
     <div className={styles.ratingsBar}>
-    <div className={styles.ratingsData}>Accuracy</div>
-
-    <div className={styles.barandnumber}><span className={styles.bar}style={containerStyles}><span className={styles.barStyle} style={fillerStyles}></span></span>
-
-    <span className={styles.inlinedata}>{accuracyData}</span></div>
+      <div className={styles.ratingsData}>Accuracy</div>
+      <div className={styles.barandnumber}>
+        <span className={styles.bar} style={containerStyles}>
+          <span className={styles.barStyle} style={fillerStyles}></span>
+        </span>
+        <span className={styles.inlinedata}>{accuracyData}</span>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default RatingAccuracy
+export default RatingAccuracy;

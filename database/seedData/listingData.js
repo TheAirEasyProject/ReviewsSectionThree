@@ -98,5 +98,5 @@ module.exports = [
   { listing_id: 97, listing_rating: 0, listing_reviews: [] },
   { listing_id: 98, listing_rating: 0, listing_reviews: [] },
   { listing_id: 99, listing_rating: 0, listing_reviews: [] },
-  { listing_id: 100, listing_rating: 0, listing_reviews: [] }
-]
+  { listing_id: 100, listing_rating: 0, listing_reviews: [] },
+];

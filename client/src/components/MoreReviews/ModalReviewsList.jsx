@@ -1,23 +1,19 @@
-import React from 'react'
-import styles from '../../../../styles.css';
+import React, { useState } from "react";
+import styles from "../../../../styles.css";
+import ModalReviewsEntries from "./ModalReviewsEntries.jsx";
 
-const ModalReviewsList = ( {data} ) => {
+const ModalReviewsList = ({ data, searchInput }) => {
   return (
     <div>
-    <div >
-      {data.length ? data[0].listing_reviews.map((review, key) => (
-          <div className={styles.reviewsTopSixModal}>
-              <img className ={styles.avatarModal} src={review.user.user_avatar}></img>
-            <div className={styles.namedateModal}>
-              <div className={styles.modalreviewusername}>{review.user.user_name}</div>
-              <div className={styles.modalreviewdate}>{review.review.review_date}</div>
-            </div>
-              <div className={styles.review_textModal}>{review.review.review_text}</div>
-        </div>
-      )) : null}
+      <div>
+        {data.length
+          ? data.map((review, key) => (
+              <ModalReviewsEntries key={key} review={review} />
+            ))
+          : null}
+      </div>
     </div>
-    </div>
-  )
-}
+  );
+};
 
-export default ModalReviewsList
+export default ModalReviewsList;
