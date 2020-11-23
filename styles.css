@@ -1,7 +1,9 @@
-html, body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+html,
+body {
   font-family: sans-serif;
   margin: 25px;
-
 }
 
 .header {
@@ -50,10 +52,10 @@ html, body {
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 35px 25px 10px;
   grid-template-areas:
-  "m h h h h h h h h h . ."
-  "m c c c c c c c c c . ."
-  "f f f f f f f f f f . ."
-  "f f f f f f f f f f . .";
+    'm h h h h h h h h h . .'
+    'm c c c c c c c c c . .'
+    'f f f f f f f f f f . .'
+    'f f f f f f f f f f . .';
 }
 
 .avatar {
@@ -71,6 +73,7 @@ html, body {
 
 .review_text {
   font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
   color: #222222;
   grid-area: f;
 }
@@ -78,14 +81,14 @@ html, body {
 .user_name {
   font-weight: bold;
   font-size: 16px;
-  color: #222222
+  color: #222222;
 }
 
 .review_date {
   padding-top: 5px;
   font-weight: lighter;
   font-size: 14px;
-  color: #717171
+  color: #717171;
 }
 
 .main {
@@ -112,10 +115,10 @@ html, body {
 #startBtn {
   position: relative;
   top: 0px;
-  transition: all ease .2s;
+  transition: all ease 0.2s;
 }
 #startBtn:active {
-  transform: scale(.98);
+  transform: scale(0.98);
 }
 
 #startBtn:hover {
@@ -125,18 +128,20 @@ html, body {
 
 .topdiv {
   padding-bottom: 20px;
-  border-top: .03px solid lightgray;
+  border-top: 0.03px solid lightgray;
 }
 
 .botdiv {
-  border-top: .03px solid lightgray;
+  border-top: 0.03px solid lightgray;
 }
 
 .buttontest {
   padding-bottom: 50px;
 }
 
-.ratingsData, .bar, .inlinedata {
+.ratingsData,
+.bar,
+.inlinedata {
   display: inline-flex;
 }
 
@@ -144,11 +149,10 @@ html, body {
   margin-bottom: 10px;
 }
 
-
 /* Modal CSS */
 
 .modalwrappermain {
-  background: rgba(90, 88, 88, .6);
+  background: rgba(90, 88, 88, 0.6);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -184,10 +188,6 @@ html, body {
   cursor: pointer;
 }
 
-.modalcontent {
-  padding: 1.5rem 1rem;
-}
-
 .modalbody {
   margin-bottom: 1rem;
 }
@@ -201,7 +201,7 @@ html, body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 0 20px;
+  padding-left: 20px;
 }
 
 .flexcontentleft {
@@ -219,7 +219,7 @@ html, body {
   cursor: pointer;
   height: 40px;
   width: 40px;
-  transition: all .3s ease;
+  transition: all 0.3s ease;
   text-align: center;
   border: none;
   font-size: 16px;
@@ -228,7 +228,7 @@ html, body {
 }
 
 .closemodalbtn:hover {
-  background-color: rgba(0, 0, 0, 0.10) ;
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .searchbar {
@@ -239,7 +239,7 @@ html, body {
 .searchinput {
   background-color: rgba(245, 241, 241, 0.781);
   height: 40px;
-  width: 100%;
+  width: 95%;
   border: 1px solid rgb(182, 181, 181);
   border-radius: 20px;
   outline: none;
@@ -273,7 +273,7 @@ html, body {
 }
 
 #staricon {
-  color: #FF385C;
+  color: #ff385c;
 }
 
 .modalratingslist {
@@ -301,10 +301,10 @@ html, body {
   grid-gap: 3px;
   grid-template-columns: repeat(10, 1fr);
   grid-template-areas:
-  "m h h h h h h h h h . ."
-  "m c c c c c c c c c . ."
-  "f f f f f f f f f f . ."
-  "f f f f f f f f f f . .";
+    'm h h h h h h h h h . .'
+    'm c c c c c c c c c . .'
+    'f f f f f f f f f f . .'
+    'f f f f f f f f f f . .';
 }
 
 .avatarModal {
@@ -323,19 +323,21 @@ html, body {
 .review_textModal {
   color: #222222;
   padding-top: 5px;
+  padding-right: 5%;
   font-size: 16px;
+  font-family: 'Montserrat', sans-serif;
   grid-area: f;
 }
 
 .modalreviewusername {
   font-size: 16px;
-  color: #222222
+  color: #222222;
 }
 
 .modalreviewdate {
   font-size: 14px;
   font-weight: lighter;
-  color: #717171
+  color: #717171;
 }
 
 .scrollbar {

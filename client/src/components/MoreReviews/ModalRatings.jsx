@@ -1,18 +1,18 @@
-import React from "react";
-import RatingCleanliness from "../Ratings/RatingCleanliness.jsx";
-import RatingAccuracy from "../Ratings/RatingAccuracy.jsx";
-import RatingCommunication from "../Ratings/RatingCommunication.jsx";
-import RatingLocation from "../Ratings/RatingLocation.jsx";
-import RatingCheckin from "../Ratings/RatingCheckin.jsx";
-import RatingValue from "../Ratings/RatingValue.jsx";
-import styles from "../../../../styles.css";
+import React from 'react';
+import RatingCleanliness from '../Ratings/RatingCleanliness.jsx';
+import RatingAccuracy from '../Ratings/RatingAccuracy.jsx';
+import RatingCommunication from '../Ratings/RatingCommunication.jsx';
+import RatingLocation from '../Ratings/RatingLocation.jsx';
+import RatingCheckin from '../Ratings/RatingCheckin.jsx';
+import RatingValue from '../Ratings/RatingValue.jsx';
+import styles from '../../../../styles.css';
 
 const ModalRatings = ({ data }) => {
   return (
     <div className={styles.modalreviews}>
       <div className={styles.modalreviewsheader}>
         <p className={styles.modalp}>
-          <i className="fa fa-star" id={styles.staricon}></i>{" "}
+          <i className='fa fa-star' id={styles.staricon}></i>{' '}
           {data.length > 0 && data[0].listing_rating} (
           {data.length > 0 && data[0].listing_reviews.length} Reviews)
         </p>

@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from "react";
-import ModalRatings from "./ModalRatings.jsx";
-import ModalSearchBar from "./ModalSearchBar.jsx";
-import ModalReviewsList from "./ModalReviewsList.jsx";
-import styles from "../../../../styles.css";
+import React, { useState, useEffect } from 'react';
+import ModalRatings from './ModalRatings.jsx';
+import ModalSearchBar from './ModalSearchBar.jsx';
+import ModalReviewsList from './ModalReviewsList.jsx';
+import styles from '../../../../styles.css';
 
 const MoreReviewsModal = ({ data, modal, modalState }) => {
-  const [searchInput, setSearchInput] = useState("");
+  const [searchInput, setSearchInput] = useState('');
   const [permData, setPermData] = useState(data[0].listing_reviews);
   const [filteredData, setFilteredData] = useState(data[0].listing_reviews);
   let searchLength = 0;
@@ -15,7 +15,7 @@ const MoreReviewsModal = ({ data, modal, modalState }) => {
     if (e.target.value.length === 0) {
       setFilteredData(permData);
     } else {
-      let newData = filteredData.filter((currentReview) => {
+      let newData = permData.filter((currentReview) => {
         return currentReview.review.review_text
           .toLowerCase()
           .includes(e.target.value.toLowerCase());

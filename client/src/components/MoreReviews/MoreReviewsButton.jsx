@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from "react";
-import MoreReviewsModal from "./MoreReviewsModal.jsx";
-import styles from "../../../../styles.css";
+import React, { useState, useEffect } from 'react';
+import MoreReviewsModal from './MoreReviewsModal.jsx';
+import styles from '../../../../styles.css';
 
 const MoreReviewsButton = ({ data }) => {
   const [totalReviews, setTotalReviews] = useState(0);
