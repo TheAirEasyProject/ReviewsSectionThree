@@ -6,7 +6,7 @@ body {
   margin: 25px;
 }
 
-.header {
+.revheader {
   display: grid;
   grid-template-columns: 1fr;
   text-align: left;
@@ -129,6 +129,7 @@ body {
 }
 
 .topdiv {
+  padding-top: 20px;
   padding-bottom: 20px;
   border-top: 0.03px solid lightgray;
 }
