@@ -8,22 +8,18 @@ const MoreReviewsModal = ({ data, modal, modalState }) => {
   const [searchInput, setSearchInput] = useState('');
   const [permData, setPermData] = useState(data[0].listing_reviews);
   const [filteredData, setFilteredData] = useState(data[0].listing_reviews);
-  let searchLength = 0;
 
   const search = (e) => {
     e.preventDefault();
-    if (e.target.value.length === 0) {
-      setFilteredData(permData);
-    } else {
-      let newData = permData.filter((currentReview) => {
-        return currentReview.review.review_text
-          .toLowerCase()
-          .includes(e.target.value.toLowerCase());
-      });
-      setSearchInput(e.target.value);
-      setFilteredData(newData);
-      searchLength++;
-    }
+    setSearchInput(e.target.value);
+
+    let newData = permData.filter((currentReview) =>
+      currentReview.review.review_text
+        .toLowerCase()
+        .includes(searchInput.toLowerCase())
+    );
+
+    setFilteredData(newData);
   };
 
   return (
@@ -45,17 +41,10 @@ const MoreReviewsModal = ({ data, modal, modalState }) => {
               </div>
               <div className={styles.flexcontentright}>
                 <div className={styles.modalreviewslist}>
-                  <ModalSearchBar
-                    data={data}
-                    searchInput={setSearchInput}
-                    search={search}
-                  />
+                  <ModalSearchBar search={search} />
                 </div>
                 <div className={styles.scrollbar}>
-                  <ModalReviewsList
-                    data={filteredData}
-                    searchInput={searchInput}
-                  />
+                  <ModalReviewsList data={filteredData} input={searchInput} />
                 </div>
               </div>
             </div>

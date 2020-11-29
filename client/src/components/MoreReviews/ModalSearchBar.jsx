@@ -2,7 +2,7 @@ import React from 'react';
 import ModalReviewsList from './ModalReviewsList.jsx';
 import styles from '../../../../styles.css';
 
-const ModalSearchBar = ({ data, searchInput, search }) => {
+const ModalSearchBar = ({ search }) => {
   return (
     <div className={styles.searchwrapper}>
       <div className={styles.searchbar}>
