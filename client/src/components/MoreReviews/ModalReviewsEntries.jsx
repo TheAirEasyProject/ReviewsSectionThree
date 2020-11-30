@@ -8,7 +8,7 @@ const ModalReviewsEntries = ({ review, input }) => {
       let split = reviewText.toLowerCase().split(input.toLowerCase());
       for (let i = 0; i < split.length; i++) {
         newReview.push(split[i]);
-        if (split[i + 1] !== undefined) {
+        if (split[i + 1]) {
           newReview.push(<mark>{input}</mark>);
         }
       }

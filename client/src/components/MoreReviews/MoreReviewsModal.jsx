@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback, useRef } from 'react';
 import ModalRatings from './ModalRatings.jsx';
 import ModalSearchBar from './ModalSearchBar.jsx';
 import ModalReviewsList from './ModalReviewsList.jsx';
@@ -18,13 +18,38 @@ const MoreReviewsModal = ({ data, modal, modalState }) => {
         .toLowerCase()
         .includes(searchInput.toLowerCase())
     );
-
     setFilteredData(newData);
   };
 
+  const escKey = useCallback((e) => {
+    if (modal) {
+      if (e.keyCode === 27) {
+        modalState(false);
+      }
+    }
+  }, []);
+
+  const node = useRef();
+  const handleClickOutside = (e) => {
+    if (modal) {
+      if (node.current.contains(e.target)) {
+        return;
+      }
+      modalState(false);
+    }
+  };
+  useEffect(() => {
+    document.addEventListener('keydown', escKey, false);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('keydown', escKey, false);
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
   return (
     <div className={styles.modalwrappermain}>
-      <div className={styles.asd}>
+      <div className={styles.asd} ref={node}>
         <div className={styles.modalheader}>
           <button
             className={styles.closemodalbtn}
